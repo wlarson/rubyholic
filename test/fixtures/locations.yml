@@ -1,11 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  latitude: 1.5
-  longitude: 1.5
+  name: Vivace
+  latitude: 47.6065233
+  longitude: -122.3207549
 
 two:
-  name: MyString
-  latitude: 1.5
-  longitude: 1.5
+  name: Cooper's Alehouse
+  latitude: 47.6876169
+  longitude: -122.3119941
+
