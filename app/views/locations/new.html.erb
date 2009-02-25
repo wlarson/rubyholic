@@ -8,15 +8,9 @@
     <%= f.text_field :name %>
   </p>
 
-  <%= link_to 'Lookup lat/lon @ www.getlatlon.com', 'http://www.getlatlon.com/', :popup => true %>
-
   <p>
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </p>
-  <p>
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
   </p>
   <p>
     <%= f.submit "Create" %>

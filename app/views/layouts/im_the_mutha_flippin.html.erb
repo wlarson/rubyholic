@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Who's the motha flippin'?</title>
+  <%= stylesheet_link_tag 'standard', :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+</head>
+
+<body id='site'>
+
+  <div id="banner">
+    I'm the motha flippin'
+  </div>
+
+  <div id="columns">
+  <div id="side">
+
+  <%= link_to "Locations", locations_path %><br />
+  <%= link_to "Groups", groups_path %><br />
+
+  </div> 
+  <div id="main"> 
+    <% if flash[:notice] -%> 
+      <div id="notice"><%= flash[:notice] %></div> 
+    <% end -%> 
+
+    <%= yield :layout %> 
+  </div> 
+  </div>
+</body>
+</html>

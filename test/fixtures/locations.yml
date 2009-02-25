@@ -2,11 +2,16 @@
 
 one:
   name: Vivace
+  address: 901 E Denny Way, Seattle, WA 98122
   latitude: 47.6065233
   longitude: -122.3207549
-
 two:
   name: Cooper's Alehouse
+  address: 8065 Lake City Way NE, Lake City Way NE, Seattle, 98115
   latitude: 47.6876169
   longitude: -122.3119941
-
+three:
+  name: Steve's Office
+  address: New York, NY
+  latitude: 40.756054
+  longitude: -73.986951
