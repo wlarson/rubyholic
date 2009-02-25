@@ -2,7 +2,11 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
   def index
-    @locations = Location.find(:all, :limit => 10)
+    if params[:order_by]
+      @locations = Location.find(:all, :limit => 10, :order => params[:order_by])
+    else
+      @locations = Location.find(:all, :limit => 10)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

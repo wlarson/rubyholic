@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= link_to 'Name', groups_path(:order_by =>'name') %></th>
   </tr>
 
 <% for group in @groups %>
