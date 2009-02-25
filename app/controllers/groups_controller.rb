@@ -29,6 +29,7 @@ class GroupsController < ApplicationController
   # GET /groups/new
   # GET /groups/new.xml
   def new
+    @page_title = "Who's the Motha Flippin'?"
     @group = Group.new
 
     respond_to do |format|

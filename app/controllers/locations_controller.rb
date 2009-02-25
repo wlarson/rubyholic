@@ -29,6 +29,7 @@ class LocationsController < ApplicationController
   # GET /locations/new
   # GET /locations/new.xml
   def new
+    @page_title = "Who's the Motha Flippin'?"
     @location = Location.new
 
     respond_to do |format|

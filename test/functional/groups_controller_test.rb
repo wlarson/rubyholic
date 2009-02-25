@@ -6,6 +6,18 @@ class GroupsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:groups)
   end
+  
+  test "index should load no more than 10 groups" do
+    assert Group.count > 10, "Test requires 11+ group fixtures"
+    get :index
+    assert_equal 10, assigns(:groups).size
+  end
+
+  test "index can order groups by name" do
+    get :index, :order_by => 'name'
+    expected = Group.find(:all, :limit => 10, :order => 'name')
+    assert_equal expected, assigns(:groups)
+  end
 
   test "should get new" do
     get :new

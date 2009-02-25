@@ -15,3 +15,43 @@ three:
   address: New York, NY
   latitude: 40.756054
   longitude: -73.986951
+four:
+  name: four
+  address: Bellingham, WA
+  latitude: 4
+  longitude: 4
+five:
+  name: five
+  address: Portland, OR
+  latitude: 5
+  longitude: 5
+six:
+  name: six
+  address: Providence, RI
+  latitude: 6
+  longitude: 6
+seven:
+  name: seven
+  address: Del Mar, CA
+  latitude: 7
+  longitude: 7
+eight:
+  name: eight
+  address: Itacare, Bahia, Brazil
+  latitude: 8
+  longitude: 8
+nine:
+  name: nine
+  address: St Cirq Lapopie, France
+  latitude: 9
+  longitude: 9
+ten:
+  name: ten
+  address: Sevilla, Spain
+  latitude: 10
+  longitude: 10
+eleven:
+  name: eleven
+  address: Salvador, Bahia, Brazil
+  latitude: 11
+  longitude: 11
