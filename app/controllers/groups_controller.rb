@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.xml
   def index
+    @page_title = "Groups are Motha Flippin'"
     if params[:order_by]
       @groups = Group.find(:all, :limit => 10, :order => params[:order_by])
     else

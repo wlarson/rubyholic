@@ -2,6 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.xml
   def index
+    @page_title = "Locs are Motha Flippin'"
     if params[:order_by]
       @locations = Location.find(:all, :limit => 10, :order => params[:order_by])
     else
