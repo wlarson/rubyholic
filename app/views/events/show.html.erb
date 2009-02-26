@@ -1,0 +1,28 @@
+<p>
+  <b>Date:</b>
+  <%=h @event.date %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @event.group_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @event.location_id %>
+</p>
+
+<p>
+  <b>Recurring:</b>
+  <%=h @event.recurring %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @event.duration %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

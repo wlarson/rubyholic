@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090226181934) do
+ActiveRecord::Schema.define(:version => 20090226183551) do
+
+  create_table "events", :force => true do |t|
+    t.datetime "date"
+    t.integer  "group_id"
+    t.integer  "location_id"
+    t.boolean  "recurring"
+    t.float    "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "groups", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-02-26 10:35:51
+  group_id: 1
+  location_id: 1
+  recurring: false
+  duration: 1.5
+
+two:
+  date: 2009-02-26 10:35:51
+  group_id: 1
+  location_id: 1
+  recurring: false
+  duration: 1.5
