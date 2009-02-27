@@ -2,8 +2,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.find(:all)
-
+    @page_title = "Events are Motha Flippin'"    
+    @events = Event.paginate :page => params[:page], :per_page => 10
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @events }

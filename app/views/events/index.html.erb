@@ -24,5 +24,8 @@
 </table>
 
 <br />
-
 <%= link_to 'New event', new_event_path %>
+<br />
+<br />
+<%= page_entries_info @events %>
+<%= will_paginate @events %>

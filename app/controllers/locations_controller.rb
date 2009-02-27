@@ -4,9 +4,10 @@ class LocationsController < ApplicationController
   def index
     @page_title = "Locs are Motha Flippin'"
     if params[:order_by]
-      @locations = Location.find(:all, :limit => 10, :order => params[:order_by])
+      @locations = Location.paginate :page => params[:page], :per_page => 10, 
+        :order => params[:order_by]
     else
-      @locations = Location.find(:all, :limit => 10)
+      @locations = Location.paginate :page => params[:page], :per_page => 10
     end
 
     respond_to do |format|

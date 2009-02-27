@@ -4,9 +4,10 @@ class GroupsController < ApplicationController
   def index
     @page_title = "Groups are Motha Flippin'"
     if params[:order_by]
-      @groups = Group.find(:all, :limit => 10, :order => params[:order_by])
+      @groups = Group.paginate :page => params[:page], :per_page => 10, 
+        :order => params[:order_by]
     else
-      @groups = Group.find(:all, :limit => 10)
+      @groups = Group.paginate :page => params[:page], :per_page => 10
     end
 
     respond_to do |format|
