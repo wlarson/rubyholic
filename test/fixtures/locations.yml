@@ -11,47 +11,47 @@ two:
   latitude: 47.6876169
   longitude: -122.3119941
 three:
-  name: Steve's Office
-  address: New York, NY
-  latitude: 40.756054
-  longitude: -73.986951
+  name: The Dish
+  address: 4358 Leary Way NW Seattle, WA 98107
+  latitude: 47.6600829
+  longitude: -122.3658566
 four:
-  name: four
-  address: Bellingham, WA
-  latitude: 4
-  longitude: 4
+  name: Senor Moose Cafe
+  address: 5242 Leary Ave NW Seattle, WA 98107
+  latitude: 47.6660869
+  longitude: -122.38143
 five:
-  name: five
-  address: Portland, OR
-  latitude: 5
-  longitude: 5
+  name: Cafe Besalu
+  address: 5909 24th Ave NW Seattle, WA 98107
+  latitude: 47.6717105
+  longitude: -122.3876082
 six:
-  name: six
-  address: Providence, RI
-  latitude: 6
-  longitude: 6
+  name: RISD Library
+  address: 15 Westminster Street, Providence, RI
+  latitude: 41.825463
+  longitude: -71.409462
 seven:
-  name: seven
-  address: Del Mar, CA
-  latitude: 7
-  longitude: 7
+  name: Miro Tea
+  address:  5405 Ballard Ave NW Seattle, WA 98107
+  latitude: 47.6676748
+  longitude: -122.384832
 eight:
-  name: eight
-  address: Itacare, Bahia, Brazil
-  latitude: 8
-  longitude: 8
+  name: Musashi's
+  address: 1400 N 45th St Seattle, WA 98103
+  latitude: 47.6613718
+  longitude: -122.3406969
 nine:
-  name: nine
-  address: St Cirq Lapopie, France
-  latitude: 9
-  longitude: 9
+  name: Caffe Fiore
+  address: 224 W. Galer St. Seattle, WA 98119
+  latitude: 47.6323289
+  longitude: -122.3600217
 ten:
-  name: ten
+  name: Triana Backpackers
   address: Sevilla, Spain
-  latitude: 10
-  longitude: 10
+  latitude: 37.3829111
+  longitude: -6.0016229
 eleven:
-  name: eleven
-  address: Salvador, Bahia, Brazil
-  latitude: 11
-  longitude: 11
+  name: Hotel Pelourinho
+  address: Rua Portas Carmo, 20 - Pelourinho
+  latitude: -12.9723563
+  longitude: -38.5092305

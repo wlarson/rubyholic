@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090226183551) do
+ActiveRecord::Schema.define(:version => 20090305030743) do
 
   create_table "events", :force => true do |t|
     t.datetime "date"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20090226183551) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "value"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
