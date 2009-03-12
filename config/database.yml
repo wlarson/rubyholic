@@ -1,29 +1,27 @@
-# PostgreSQL. Versions 7.4 and 8.x are supported.
-# http://developer.apple.com/internet/opensource/postgres.html
-
+# MySQL.  Versions 4.1 and 5.0 are recommended.
 #
-# Install the ruby-postgres driver:
-#   gem install ruby-postgres
+# Install the MySQL driver:
+#   gem install mysql
 # On Mac OS X:
-#   gem install ruby-postgres -- --include=/usr/local/pgsql
+#   sudo gem install mysql -- --with-mysql-dir=/usr/local/mysql
+# On Mac OS X Leopard:
+#   sudo env ARCHFLAGS="-arch i386" gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+#       This sets the ARCHFLAGS environment variable to your native architecture
 # On Windows:
-#   gem install ruby-postgres
+#   gem install mysql
 #       Choose the win32 build.
-#       Install PostgreSQL and put its /bin directory on your path.
-
-# For my OS X MacBook I used:
-# sudo env ARCHFLAGS="-arch i386" gem install \
-#  ruby-pg -- \
-#  --with-pgsql-lib=/usr/local/pgsql/lib \
-#  --with-pgsql-include=/usr/local/pgsql/include
-
+#       Install MySQL and put its /bin directory on your path.
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 login: &login
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql
+  encoding: utf8
   pool: 5
-  username: postgres
-  password: postgres
-  host: localhost
+  username: root
+  password:
+  socket: /opt/local/var/run/mysql5/mysqld.sock
+
 
 development:
   <<: *login
