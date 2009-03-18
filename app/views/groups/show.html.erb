@@ -9,28 +9,14 @@
 <% end %>
 
 <p>
-  <b>Group Name:</b>
+  <b>Name:</b>
   <%=h @group.name %>
 </p>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
 
-<p />
-<table>
-  <tr>
-    <th>Upcoming Events</th>
-    <th>Date</th>
-    <th>Location</th>
-  </tr>
-
-<% for event in @group.events.upcoming %>
-  <tr>
-    <td />
-    <td><%=h event.date %></td>
-    <td><%=h event.location.name %></td>
-  </tr>
-<% end %>
-</table>
+<%= render :partial =>"events/upcoming", 
+  :locals => {:upcoming_events => @group.events.upcoming} %>
 
 <%= map.div(:width => 600, :height => 400) unless map.nil? %>
