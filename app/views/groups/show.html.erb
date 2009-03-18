@@ -1,8 +1,36 @@
+<% locations = @group.locations %>
+<% unless locations.empty? %>
+  <% next_event = @group.events.upcoming.first %>
+  <% base_loc = next_event ? next_event.location : locations.first %>
+  <%= GMap.header %>
+  <% map = map_location(base_loc, locations) %>
+  <%= map.to_html %>
+  </head><body>
+<% end %>
+
 <p>
-  <b>Name:</b>
+  <b>Group Name:</b>
   <%=h @group.name %>
 </p>
 
-
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
+
+<p />
+<table>
+  <tr>
+    <th>Upcoming Events</th>
+    <th>Date</th>
+    <th>Location</th>
+  </tr>
+
+<% for event in @group.events.upcoming %>
+  <tr>
+    <td />
+    <td><%=h event.date %></td>
+    <td><%=h event.location.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= map.div(:width => 600, :height => 400) unless map.nil? %>

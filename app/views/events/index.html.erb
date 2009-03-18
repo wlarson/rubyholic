@@ -12,8 +12,8 @@
 <% for event in @events %>
   <tr>
     <td><%=h event.date %></td>
-    <td><%=h event.group_id %></td>
-    <td><%=h event.location_id %></td>
+    <td><%=h event.group.name %></td>
+    <td><%=h event.location.name %></td>
     <td><%=h event.recurring %></td>
     <td><%=h event.duration %></td>
     <td><%= link_to 'Show', event %></td>

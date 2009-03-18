@@ -4,7 +4,8 @@ module ApplicationHelper
   def map_location loc, locs = []
     @map = GMap.new("map_div")
     @map.control_init(:large_map => true,:map_type => true)
-    @map.center_zoom_init([loc.latitude,loc.longitude],16)
+    @map.center_zoom_init([loc.latitude,loc.longitude], 
+      locs.empty? || locs.size == 1 ? 16 : 14)
 
     locs = [loc] + locs
     locs.each do |l| 

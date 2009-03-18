@@ -1,15 +1,81 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  date: 2009-02-26 10:35:51
-  group_id: 1
-  location_id: 1
+  date: <%= -1.weeks.ago %>
+  group: one
+  location: one
   recurring: false
   duration: 1.5
 
 two:
-  date: 2009-02-26 10:35:51
-  group_id: 1
-  location_id: 1
+  date: <%= -5.days.ago %>
+  group: two
+  location: two
   recurring: false
   duration: 1.5
+three:
+  date: <%= -2.weeks.ago %>
+  group: three
+  location: three
+  recurring: true
+  duration: 1.0
+four:
+  date: <%= -4.days.ago %>
+  group: four
+  location: four
+  recurring: false
+  duration: 0.5
+five:
+  date: <%= -5.weeks.ago %>
+  group: five
+  location: five
+  recurring: false
+  duration: 2.0
+six:
+  date:  <%= -6.weeks.ago %>
+  group: six
+  location: six
+  recurring: false
+  duration: 2.5
+seven:
+  date: <%= -7.days.ago %>
+  group: seven
+  location: seven
+  recurring: false
+  duration: 2.0
+eight:
+  date: <%= -8.weeks.ago %>
+  group: eight
+  location: eight
+  recurring: false
+  duration: 2.0
+nine:
+  date: <%= -9.days.ago %>
+  group: nine
+  location: nine
+  recurring: false
+  duration: 2.0
+ten:
+  date: <%= -10.days.ago %>
+  group: ten
+  location: ten
+  recurring: true
+  duration: 2.0
+eleven:
+  date: <%= -11.days.ago %>
+  group: eleven
+  location: eleven
+  recurring: false
+  duration: 2.0
+twelve:
+  date: <%= -1.days.ago %>
+  group: three
+  location: four
+  recurring: false
+  duration: 1.0
+thirteen:
+  date: <%= -13.days.ago %>
+  group: three
+  location: five
+  recurring: false
+  duration: 2.0
