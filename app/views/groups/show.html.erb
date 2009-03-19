@@ -16,7 +16,18 @@
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
 
-<%= render :partial =>"events/upcoming", 
-  :locals => {:upcoming_events => @group.events.upcoming} %>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Location</th>
+  </tr>
+
+<% for event in @group.events.upcoming %>
+  <tr>
+    <td><%=h event.date %></td>
+    <td><%= link_to h(event.location.name), location_path(event.location) %></td>
+  </tr>
+<% end %>
+</table>
 
 <%= map.div(:width => 600, :height => 400) unless map.nil? %>
