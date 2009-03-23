@@ -1,18 +1,18 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
-  def map_location loc, locs = []
+  def map_location locs
+    locs = [locs] unless locs.is_a? Array
     @map = GMap.new("map_div")
     @map.control_init(:large_map => true,:map_type => true)
-    @map.center_zoom_init([loc.latitude,loc.longitude], 
-      locs.empty? || locs.size == 1 ? 16 : 14)
-
-    locs = [loc] + locs
-    locs.each do |l| 
-      @map.overlay_init(GMarker.new([l.latitude, l.longitude], :title => l.name))
-    end
-
+    markers = locs.map {|l| GMarker.new([l.latitude, l.longitude], :title => l.name)}
+    markers.each {|marker| @map.overlay_init(marker) }
+    @map.center_zoom_on_bounds_init(markers.map {|m| m.point})
     @map
   end
 
+  def search query
+    search_results = ThinkingSphinx::Search.search(query)
+  end
+  
 end

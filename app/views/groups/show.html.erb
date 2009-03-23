@@ -1,9 +1,6 @@
-<% locations = @group.locations %>
-<% unless locations.empty? %>
-  <% next_event = @group.events.upcoming.first %>
-  <% base_loc = next_event ? next_event.location : locations.first %>
+<% unless @locations.empty? %>
   <%= GMap.header %>
-  <% map = map_location(base_loc, locations) %>
+  <% map = map_location(@locations) %>
   <%= map.to_html %>
   </head><body>
 <% end %>
@@ -22,7 +19,7 @@
     <th>Location</th>
   </tr>
 
-<% for event in @group.events.upcoming %>
+<% for event in @upcoming_events %>
   <tr>
     <td><%=h event.date %></td>
     <td><%= link_to h(event.location.name), location_path(event.location) %></td>

@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<h1>Upcoming events</h1>
 
 <table>
   <tr>
@@ -9,7 +9,7 @@
     <th>Duration</th>
   </tr>
 
-<% for event in @events %>
+<% for event in @upcoming_events %>
   <tr>
     <td><%=h event.date %></td>
     <td><%=h event.group.name %></td>
@@ -27,5 +27,5 @@
 <%= link_to 'New event', new_event_path %>
 <br />
 <br />
-<%= page_entries_info @events %>
-<%= will_paginate @events %>
+<%= page_entries_info @upcoming_events %>
+<%= will_paginate @upcoming_events %>

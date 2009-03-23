@@ -20,6 +20,8 @@ class GroupsController < ApplicationController
   # GET /groups/1.xml
   def show
     @group = Group.find(params[:id])
+    @upcoming_events = @group.events.upcoming
+    @locations = @upcoming_events.map {|ue| ue.location}
 
     respond_to do |format|
       format.html # show.html.erb
