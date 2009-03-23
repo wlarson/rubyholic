@@ -11,8 +11,9 @@ module ApplicationHelper
     @map
   end
 
-  def search query
-    search_results = ThinkingSphinx::Search.search(query)
+  def search
+    search_results = ThinkingSphinx::Search.search(params[:q])
+    render :partial => "shared/search_results"
   end
   
 end
