@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090305030743) do
+ActiveRecord::Schema.define(:version => 20090330060106) do
 
   create_table "events", :force => true do |t|
     t.datetime "date"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20090305030743) do
     t.integer  "value"
     t.integer  "resource_id"
     t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rsvps", :force => true do |t|
+    t.string   "email"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

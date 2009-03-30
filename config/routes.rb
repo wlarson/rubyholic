@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :rsvps
+
   map.resources :events, :locations, :groups, :search
   
   # The priority is based upon order of creation: first created -> highest priority.
